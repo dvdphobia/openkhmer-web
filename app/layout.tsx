@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const dmSans = localFont({
+  src: "../public/fonts/dm-sans.ttf",
+  variable: "--font-sans",
+  weight: "100 1000",
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: "Neuroshift — Research and product development",
   description:
@@ -17,7 +25,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={dmSans.variable}>
       <body>{children}</body>
     </html>
   );

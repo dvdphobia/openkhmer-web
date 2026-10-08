@@ -50,3 +50,5 @@ Dependency audit: production dependencies have no reported vulnerabilities as of
 `UI_UX_AUDIT.html` contains the pre-edit issue register, the requested A–G summary, implementation order, and final verification/limitations. Open it in a browser for the formatted report.
 
 `components/action-link.tsx` provides primary, text and outline link variants. Shared type, spacing, surface and control tokens are declared in `app/globals.css`. Narrative sections use 64px desktop and 48px mobile spacing; essential labels are 14px. Navigation marks the current route, including nested research records, and supports mobile Escape/focus recovery. The OCR preview marks Khmer runs within mixed-script text and remains illustrative.
+
+Typography uses self-hosted DM Sans (SIL Open Font License) for Latin text, with the existing Noto Khmer font for Khmer. DM Sans provides a similar visual direction to OpenAI Sans; this project does not distribute OpenAI's custom font. Font licenses are included in public/fonts.

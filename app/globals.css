@@ -44,7 +44,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
@@ -230,7 +230,7 @@ a:hover > .arrow {
   color: var(--muted);
 }
 .hero-bottom > a {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans), Arial, sans-serif;
   letter-spacing: 0;
   display: flex;
   gap: 20px;
@@ -883,7 +883,7 @@ h2 {
   background: var(--lime);
   border-color: #b4d978;
   font:
-    14px Arial,
+    14px var(--font-sans), Arial,
     sans-serif;
 }
 .completed {
@@ -1837,7 +1837,7 @@ h2 {
 .output-comment {
   display: block;
   font:
-    var(--type-label)/1.5 Arial,
+    var(--type-label)/1.5 var(--font-sans), Arial,
     sans-serif;
   color: var(--muted);
   margin-bottom: var(--space-6);
@@ -1855,7 +1855,7 @@ h2 {
 }
 .stage-label {
   font:
-    var(--type-label)/1.5 Arial,
+    var(--type-label)/1.5 var(--font-sans), Arial,
     sans-serif;
   color: var(--muted);
 }
@@ -1875,7 +1875,7 @@ h2 {
 .support-footnote {
   margin-top: var(--space-6);
   font:
-    var(--type-label)/1.6 Arial,
+    var(--type-label)/1.6 var(--font-sans), Arial,
     sans-serif !important;
   color: var(--accent-text) !important;
 }
