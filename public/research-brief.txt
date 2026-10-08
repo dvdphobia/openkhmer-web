@@ -1,0 +1,33 @@
+OPENKHMER — RESEARCH BRIEF
+Research snapshot: October 2, 2026
+Contact: hello.sophanha@gmail.com
+
+MISSION
+Research Khmer OCR that can turn printed text into searchable, usable digital text, while preserving the script's characters, marks, and joiners.
+
+STAGE
+Independent early-stage research. No public OCR product, released API, published benchmark results, or sponsorship is claimed.
+
+VERIFIED FOUNDATION
+An initial Colab cleaning run for one synthetic printed Khmer dataset was completed. The prepared corpus contains 60,724 training, 3,308 validation, and 3,379 locked test examples. These are data-preparation counts, not model-performance results.
+
+NEXT STEPS
+1. Verify the revised preparation workflow and its saved outputs.
+2. Run a small-set training gate before broader experiments.
+3. Compare recognition approaches on the same data using character error rate.
+4. Evaluate fixed configurations on a locked test set.
+5. Study ornate lettering and other document styles separately.
+
+SUPPORT SOUGHT
+Cloud/GPU credits for controlled training and evaluation.
+Technical mentorship in OCR, Khmer language technology, and experimental design.
+Startup program support to develop a sustainable path from research to a useful product.
+
+RESEARCH PRINCIPLES
+Preserve Unicode and Khmer shaping-related characters. Audit labels and source coverage. Avoid training/test overlap. Keep a locked test set. Measure before scaling. Do not present a diagnostic model run as usable OCR.
+
+SOURCE NOTE
+Prepared-corpus figures come from OPENKHMER_PROJECT_STATUS_2026-10-02.md. RESEARCH_REVIEW_NEXT_STEPS.md notes that execution of the revised Kaggle preparation workflow and training gate remains unverified. No training success or accuracy is inferred from these documents.
+
+GET IN TOUCH
+hello.sophanha@gmail.com
