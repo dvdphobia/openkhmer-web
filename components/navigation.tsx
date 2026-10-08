@@ -1,55 +1,20 @@
 "use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Arrow, BrandMark } from "./icons";
-import { ActionLink } from "./action-link";
+import { site } from "@/lib/site";
 
 const links = [
-  ["Research", "#research"],
-  ["Concept preview", "#vision"],
-  ["Progress", "#progress"],
-  ["Support", "#support"],
+  ["Research", "/research"],
+  ["OpenKhmer", "/openkhmer"],
+  ["About", "/about"],
 ];
 
-function useCurrentSection() {
-  const [active, setActive] = useState("");
-  useEffect(() => {
-    const sections = [...document.querySelectorAll("main > section")];
-    // Pick the section occupying most of the reading area. Callback entries
-    // alone omit sections that stayed visible during an anchor/tab interaction.
-    const observer = new IntersectionObserver(
-      () => {
-        const headerHeight =
-          document.querySelector("header")?.getBoundingClientRect().height ??
-          88;
-        let current = "";
-        let largest = 0;
-        for (const section of sections) {
-          const rect = section.getBoundingClientRect();
-          const visible = Math.max(
-            0,
-            Math.min(rect.bottom, window.innerHeight) -
-              Math.max(rect.top, headerHeight),
-          );
-          if (visible > largest) {
-            largest = visible;
-            current = `#${section.id}`;
-          }
-        }
-        setActive(current);
-      },
-      { threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] },
-    );
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
-  }, []);
-  return active;
-}
-
-export function Navigation({ home = true }: { home?: boolean }) {
-  const prefix = home ? "" : "/";
+export function Navigation() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
-  const active = useCurrentSection();
+  const current = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
   useEffect(() => {
     const media = window.matchMedia("(min-width: 701px)");
     const closeOnDesktop = () => {
@@ -64,7 +29,7 @@ export function Navigation({ home = true }: { home?: boolean }) {
   }
   return (
     <header
-      className="header"
+      className="header company-header"
       onKeyDown={(event) => {
         if (event.key === "Escape" && open) {
           event.preventDefault();
@@ -73,29 +38,21 @@ export function Navigation({ home = true }: { home?: boolean }) {
       }}
     >
       <div className="section-shell nav-shell">
-        <a className="brand" href={home ? "#" : "/"} aria-label="OpenKhmer home">
-          <BrandMark />
-          openkhmer<span className="brand-period">.</span>
-        </a>
+        <Link className="brand company-brand" href="/" aria-label="Neuroshift home" onClick={() => setOpen(false)}>
+          neuroshift<span className="company-brand-dot">.</span>
+        </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
-          {links.slice(0, 3).map(([label, href]) => (
-            <a
-              href={`${prefix}${href}`}
+          {links.map(([label, href]) => (
+            <Link
+              href={href}
               key={href}
-              aria-current={active === href ? "location" : undefined}
+              aria-current={current(href) ? "page" : undefined}
             >
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
-        <ActionLink
-          className="nav-support"
-          variant="outline"
-          href={`${prefix}#support`}
-          aria-current={active === "#support" ? "location" : undefined}
-        >
-          Support
-        </ActionLink>
+        <a className="company-contact nav-support" href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">↗</span></a>
         <button
           ref={toggle}
           className="menu-toggle"
@@ -115,16 +72,17 @@ export function Navigation({ home = true }: { home?: boolean }) {
         aria-label="Mobile navigation"
       >
         {links.map(([label, href]) => (
-          <a
+          <Link
             key={href}
-            href={`${prefix}${href}`}
-            aria-current={active === href ? "location" : undefined}
+            href={href}
+            aria-current={current(href) ? "page" : undefined}
             onClick={() => setOpen(false)}
           >
             {label}
-            <Arrow diagonal />
-          </a>
+            <span aria-hidden="true">↗</span>
+          </Link>
         ))}
+        <a href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
   );

@@ -1974,6 +1974,139 @@ h2 {
 h2, .support-copy > h2 { font-size:var(--type-heading); line-height:1.15; letter-spacing:-1.5px; }
 .action--text:active { color:var(--ink); }
 
+/* Neuroshift company pages share the product palette and spacing tokens. */
+.company-header { background: var(--paper); backdrop-filter: none; }
+.company-brand { font-size: 27px; letter-spacing: -1.3px; gap: 0; }
+.company-brand-dot { color: #6b8137; }
+.company-header .desktop-nav { margin-right: 32px; gap: 32px; }
+.company-header .desktop-nav a { min-height: 48px; display: flex; align-items: center; }
+.company-header a[aria-current="page"] { border-bottom-color: transparent; text-decoration: underline; text-underline-offset: 7px; text-decoration-thickness: 1px; }
+.company-contact { display: inline-flex; gap: 16px; align-items: center; min-height: 48px; font-size: 14px; border-left: 1px solid var(--line); padding-left: 24px; }
+.company-main { overflow: clip; }
+.company-eyebrow { margin: 0 0 24px; font: 12px/1.6 var(--mono); letter-spacing: .07em; color: var(--muted); }
+.company-hero { padding-top: 88px; }
+.company-hero h1 { font-size: clamp(64px, 9.2vw, 128px); font-weight: 400; letter-spacing: -.065em; line-height: .99; margin: 0 0 48px; }
+.company-hero h1 span { color: #6b765c; }
+.company-hero-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; padding-bottom: 64px; }
+.company-hero-bottom p { max-width: 525px; font-size: 20px; line-height: 1.65; margin: 0; }
+.company-inline-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 12px; min-height: 48px; font-size: 14px; line-height: 1.5; text-decoration: underline; text-underline-offset: 6px; text-decoration-color: #a2aa98; }
+.company-inline-link:hover { text-decoration-color: currentColor; }
+.company-inline-link > span[aria-hidden] { font-size: 22px; }
+.hero-rule { display: flex; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); padding: 20px 0; font: 11px/1.5 var(--mono); color: var(--muted); }
+.company-feature { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 64px; padding-top: 40px; padding-bottom: 88px; align-items: center; }
+.feature-art { min-width: 0; }
+.research-art { height: 520px; position: relative; overflow: hidden; background: #c5d5a4; color: #25341d; }
+.research-art-grid { position: absolute; inset: 0; background-image: linear-gradient(#53653a12 1px, transparent 1px), linear-gradient(90deg, #53653a12 1px, transparent 1px); background-size: 42px 42px; }
+.research-art-caption { position: absolute; top: 24px; left: 24px; font: 10px/1.5 var(--mono); letter-spacing: .06em; }
+.script-sheet { position: absolute; width: 48%; height: 65%; padding: 24px; background: #fafbef; border: 1px solid #73815f; box-shadow: 7px 8px 0 #53653a1a; }
+.sheet-back { left: 15%; top: 19%; transform: rotate(-12deg); background: #e3e9d3; }
+.sheet-back > span { display: block; font: 25px/1.8 Khmer, sans-serif; margin: 52px 0 30px; }
+.sheet-back i { display: block; border-top: 1px solid #aeb99c; margin-top: 22px; }
+.sheet-front { left: 37%; top: 16%; transform: rotate(8deg); display: flex; flex-direction: column; justify-content: space-between; }
+.sheet-label { font: 9px/1.5 var(--mono); letter-spacing: .02em; }
+.sheet-character { font: 150px/1.4 Khmer, sans-serif; align-self: center; }
+.sheet-baseline { position: absolute; top: 68%; left: 15%; right: 15%; border-top: 1px solid #a3b58b; }
+.script-index { position: absolute; bottom: 24px; right: 24px; left: 24px; display: flex; gap: 16px; align-items: center; font: 10px/1.6 var(--mono); }
+.script-index > span:first-child { font-size: 32px; line-height: 1; border-right: 1px solid #73815f; padding-right: 16px; }
+.feature-copy h2 { font-size: 56px; font-weight: 400; line-height: 1.1; letter-spacing: -.045em; margin: 0 0 24px; }
+.feature-lead { font-size: 28px; line-height: 1.35; letter-spacing: -.6px; margin: 0 0 24px; }
+.feature-copy > p:not(.company-eyebrow):not(.feature-lead) { font-size: 16px; line-height: 1.75; color: var(--muted); max-width: 430px; }
+.feature-stage { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; font-size: 12px; color: var(--muted); }
+.feature-stage span + span { border-left: 1px solid #a6ae9b; padding-left: 12px; }
+.company-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 24px; min-height: 52px; background: var(--ink); color: var(--paper); font-size: 14px; line-height: 1.5; transition: background .15s; }
+.company-button:hover { background: var(--hover); }
+.company-button > span { font-size: 20px; }
+.company-section { padding-block: 64px; border-top: 1px solid var(--line); }
+.company-section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 40px; }
+.company-main h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 400; letter-spacing: -.04em; line-height: 1.15; margin: 0; }
+.research-entry { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 48px; align-items: center; }
+.research-art--compact { height: 320px; }
+.research-art--compact .script-sheet { padding: 16px; }
+.research-art--compact .sheet-character { font-size: 90px; }
+.research-art--compact .sheet-back > span { margin: 25px 0 20px; font-size: 20px; }
+.research-art--compact .script-index { bottom: 16px; left: 16px; right: 16px; }
+.research-art--compact .research-art-caption { top: 16px; left: 16px; }
+.research-entry:hover .research-entry-copy h3 { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.company-meta { display: flex; flex-wrap: wrap; gap: 16px; color: var(--muted); font-size: 12px; margin-bottom: 24px; }
+.research-entry h3 { font-size: 32px; font-weight: 400; line-height: 1.25; letter-spacing: -.8px; margin: 0 0 20px; max-width: 480px; }
+.research-entry p { font-size: 16px; line-height: 1.75; color: var(--muted); max-width: 470px; margin: 0 0 20px; }
+.company-approach { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding-block: 80px; border-top: 1px solid var(--line); }
+.approach-copy p { font-size: 20px; line-height: 1.65; margin: 0 0 24px; }
+.company-invitation { margin-top: 16px; margin-bottom: 80px; padding: 48px; background: #e3ead7; display: grid; grid-template-columns: 1.2fr 1fr; gap: 0 64px; }
+.company-invitation > .company-eyebrow { grid-column: 1 / -1; }
+.company-invitation > div { align-self: end; }
+.company-invitation p:not(.company-eyebrow) { margin: 0 0 24px; font-size: 16px; line-height: 1.75; }
+.company-footer { padding-top: 48px; padding-bottom: 24px; border-top: 1px solid var(--line); }
+.company-footer-top { display: flex; justify-content: space-between; gap: 32px; align-items: flex-start; margin-bottom: 40px; }
+.company-footer-top p { margin: 0; font-size: 14px; line-height: 1.8; color: var(--muted); }
+.company-footer-top .company-inline-link { padding-top: 0; overflow-wrap: anywhere; }
+.company-footer-bottom { border-top: 1px solid var(--line); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--muted); }
+.company-footer-bottom nav { display: flex; flex-wrap: wrap; gap: 24px; }
+.company-footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; gap: 8px; }
+.company-footer-bottom a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.company-page-intro { padding-block: 88px 64px; max-width: 850px; }
+.company-page-intro h1 { font-size: clamp(44px, 6vw, 84px); font-weight: 400; line-height: 1.05; letter-spacing: -.055em; margin: 0 0 32px; }
+.company-page-intro > p:last-child { font-size: 20px; line-height: 1.7; max-width: 680px; margin-bottom: 0; }
+.library-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 24px 0; border-top: 1px solid var(--line); margin-bottom: 24px; }
+.library-heading h2 { font-size: 20px; letter-spacing: -.3px; }
+.library-heading > span { font: 12px/1.5 var(--mono); color: var(--muted); }
+.research-index-note { border-top: 1px solid var(--line); margin-top: 64px; padding-block: 32px 64px; }
+.research-index-note p { font-size: 14px; line-height: 1.8; max-width: 680px; color: var(--muted); }
+.about-section { padding-block: 64px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; }
+.about-section p { margin: 0 0 24px; line-height: 1.8; }
+.about-section h2 { font-size: 36px; }
+.about-contact h3 { font-size: 26px; font-weight: 400; margin: 0 0 16px; }
+.about-contact .contact-note { margin-top: 24px; color: var(--muted); font-size: 14px; }
+@media (max-width: 1000px) {
+  .company-feature { gap: 40px; }
+  .research-art { height: 450px; }
+  .research-art--compact { height: 300px; }
+  .sheet-character { font-size: 120px; }
+  .script-sheet { padding: 16px; }
+  .company-footer-top { flex-wrap: wrap; }
+  .company-footer-top > .company-inline-link { flex-basis: 100%; }
+}
+@media (max-width: 700px) {
+  .company-header .nav-shell { height: 72px; }
+  .company-brand { font-size: 25px; }
+  .company-header .company-contact { display: none; }
+  .company-hero { padding-top: 56px; }
+  .company-hero h1 { font-size: clamp(60px, 14vw, 88px); margin-bottom: 32px; }
+  .company-hero-bottom { align-items: flex-start; flex-direction: column; gap: 20px; padding-bottom: 40px; }
+  .company-hero-bottom p { font-size: 18px; }
+  .hero-rule { font-size: 10px; }
+  .company-feature { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 16px; padding-bottom: 48px; }
+  .research-art { height: 400px; }
+  .feature-copy h2 { font-size: 44px; }
+  .feature-lead { font-size: 26px; }
+  .company-section { padding-block: 48px; }
+  .company-section-head { align-items: flex-start; flex-direction: column; gap: 16px; margin-bottom: 24px; }
+  .research-entry { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .research-art--compact { height: 280px; }
+  .research-entry h3 { font-size: 28px; }
+  .company-meta { margin-bottom: 16px; }
+  .company-approach { grid-template-columns: 1fr; gap: 32px; padding-block: 48px; }
+  .approach-copy p { font-size: 18px; }
+  .company-invitation { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; margin-bottom: 48px; }
+  .company-invitation .company-eyebrow { margin-bottom: 0; }
+  .company-invitation h2 { font-size: 36px; }
+  .company-footer-top { flex-direction: column; gap: 24px; margin-bottom: 24px; }
+  .company-footer-top > .company-inline-link { flex-basis: auto; }
+  .company-footer-bottom { align-items: flex-start; flex-direction: column; }
+  .company-page-intro { padding-block: 56px 48px; }
+  .company-page-intro > p:last-child { font-size: 18px; }
+  .research-index-note { margin-top: 40px; padding-bottom: 48px; }
+  .about-section { grid-template-columns: 1fr; gap: 24px; padding-block: 48px; }
+  .about-section h2 { font-size: 30px; }
+}
+@media (max-width: 380px) {
+  .research-art { height: 330px; }
+  .sheet-character { font-size: 100px; }
+  .sheet-back > span { font-size: 18px; }
+  .research-art--compact { height: 260px; }
+  .company-inline-link { gap: 12px; }
+}
+
 /* Public research record and company attribution. */
 .record-actions { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-8); align-items: center; }
 .team-section, .record-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--space-16); border-top: 1px solid var(--line); }

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 export const metadata: Metadata = {
-  title: "OpenKhmer — A digital future for Khmer text",
+  title: "Neuroshift — Research and product development",
   description:
-    "OpenKhmer is Neuroshift’s Khmer OCR product in development. Read our preparation results, research limitations, and next experiment.",
+    "Neuroshift is the company behind OpenKhmer. Explore our Khmer OCR research, preparation results, and product development in Cambodia.",
   icons: { icon: "/icon.svg" },
   openGraph: {
-    title: "OpenKhmer — A digital future for Khmer text",
+    title: "Neuroshift — Research and product development",
     description:
       "Khmer OCR research by Neuroshift. Preparation results, current limitations, and the next experiment.",
     type: "website",
