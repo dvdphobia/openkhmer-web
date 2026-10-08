@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SiteFooter } from "@/components/site-footer";
 import { Arrow } from "@/components/icons";
 import { Navigation } from "@/components/navigation";
-import { DocumentArt } from "@/components/document-art";
+import { LandingArt } from "@/components/landing-art";
 import { VisionPreview } from "@/components/vision-preview";
 import { site } from "@/lib/site";
 
@@ -89,34 +89,25 @@ export default function Home() {
         Skip to content
       </a>
       <Navigation />
-      <main id="main">
-        <section className="hero section-shell" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <p className="eyebrow-pill">Khmer OCR research by Neuroshift</p>
+      <main id="main" className="openkhmer-landing">
+        <section className="openkhmer-hero" aria-labelledby="hero-title">
+          <LandingArt />
+          <div className="openkhmer-hero-copy">
+            <p className="landing-label">OPENKHMER / BY NEUROSHIFT</p>
             <h1 id="hero-title">
               Khmer text.
-              <br />A new chapter.
+              <br />A new<br />chapter.
             </h1>
-            <p className="hero-description">
-              We’re researching how to turn printed Khmer into searchable text,
-              starting with careful data preparation and model evaluation.
+            <p className="landing-description">
+              Research into turning printed Khmer into searchable text.
+              Starting with better data, careful experiments, and respect
+              for the script.
             </p>
-            <div className="hero-actions">
-              <ActionLink variant="primary" href={site.sponsorHref}>
-                Email the team
-              </ActionLink>
-              <ActionLink variant="text" href="/research/openkhmer-data-preparation">
-                Read the research record
-              </ActionLink>
+            <div className="landing-actions">
+              <a className="landing-button" href="/research/openkhmer-data-preparation">Explore the research</a>
+              <a className="landing-button landing-button--light" href={site.sponsorHref}>Discuss support</a>
             </div>
-            <p className="hero-note">Research stage. No public OCR tool yet.</p>
-          </div>
-          <DocumentArt />
-          <div className="hero-bottom">
-            <span>OPENKHMER / RESEARCH IN CAMBODIA</span>
-            <a href="#mission">
-              Why Khmer OCR <Arrow className="arrow-down" />
-            </a>
+            <p className="landing-stage">Product in development · No public OCR tool yet</p>
           </div>
         </section>
         <div className="mission-strip" aria-label="Research priorities">

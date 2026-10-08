@@ -1974,6 +1974,61 @@ h2 {
 h2, .support-copy > h2 { font-size:var(--type-heading); line-height:1.15; letter-spacing:-1.5px; }
 .action--text:active { color:var(--ink); }
 
+/* OpenKhmer’s expressive landing hero; company pages remain editorial. */
+.openkhmer-hero { position: relative; overflow: hidden; background: #9de9e2; color: #101a17; min-height: 790px; padding: 64px 24px 72px; isolation: isolate; }
+.openkhmer-hero-copy { position: relative; z-index: 2; width: min(780px, 100%); margin-inline: auto; }
+.landing-label { font: 12px/1.5 var(--mono); letter-spacing: .05em; margin: 0 0 32px; }
+.openkhmer-hero h1 { font-size: clamp(72px, 9vw, 124px); font-weight: 700; line-height: .92; letter-spacing: -.065em; margin: 0 0 32px; max-width: 800px; }
+.landing-description { max-width: 475px; font-size: 18px; line-height: 1.65; margin: 0 0 24px; }
+.landing-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.landing-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 14px 24px; font-size: 14px; font-weight: 600; background: #101a17; color: #fff; border: 1px solid #101a17; }
+.landing-button:hover { background: #314239; }
+.landing-button--light { background: #f9fff4; color: #101a17; border-color: #f9fff4; }
+.landing-button--light:hover { background: #e5f4df; }
+.landing-stage { font-size: 12px; line-height: 1.6; margin: 20px 0 0; }
+.landing-art { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.landing-glyph { position: absolute; left: -140px; top: 100px; font: 520px/1.2 Khmer, sans-serif; color: #d1fb57; -webkit-text-stroke: 2px #566d32; transform: rotate(-14deg); opacity: .8; }
+.landing-scan-lines { position: absolute; left: 0; top: 160px; width: 230px; bottom: 160px; overflow: hidden; transform: rotate(-14deg); }
+.landing-scan-lines i { display: block; border-top: 1px solid #56734c; margin-top: 70px; opacity: .4; }
+.landing-fragments { position: absolute; right: 36px; top: 30px; display: flex; align-items: flex-start; gap: 14px; }
+.landing-fragments span { display: block; font: 88px/1.5 Khmer, sans-serif; color: #7761c3; transform: rotate(12deg); }
+.landing-fragments span:nth-child(2) { margin-top: 90px; transform: rotate(-12deg); }
+.landing-fragments span:nth-child(3) { margin-top: 25px; }
+.landing-ribbon { position: absolute; width: 230px; height: 70px; background: #d1fb57; }
+.ribbon-one { top: 34px; left: 7%; transform: rotate(24deg); }
+.ribbon-two { bottom: 56px; right: -40px; background: #b6a0f0; transform: rotate(-24deg); }
+.landing-sample { position: absolute; right: 45px; bottom: 190px; padding: 32px 36px; background: #d4fd65; transform: rotate(10deg); border: 1px solid #748e3a; }
+.landing-sample span:first-child { display: block; font: 38px/1.5 Khmer, sans-serif; }
+.landing-sample span:last-child { display: block; font: 10px/1.5 var(--mono); letter-spacing: .06em; margin-top: 20px; }
+.openkhmer-landing .mission-strip { background: var(--paper); border-color: var(--line); padding-block: 24px; font-size: 14px; }
+.openkhmer-landing .mission-strip span + span { border-left: 1px solid #a8b19d; padding-left: 32px; }
+.openkhmer-landing .mission, .openkhmer-landing .research, .openkhmer-landing .vision, .openkhmer-landing .progress-section { padding-block: 80px; }
+.openkhmer-landing .support-section { background: #d8edaf; }
+@media (max-width: 1050px) {
+  .openkhmer-hero-copy { width: 70%; }
+  .openkhmer-hero { min-height: 750px; }
+  .landing-glyph { left: -155px; top: 100px; font-size: 420px; }
+  .landing-fragments { right: -40px; top: 0; }
+  .landing-fragments span { font-size: 64px; }
+  .landing-sample { right: -100px; bottom: 140px; }
+}
+@media (max-width: 700px) {
+  .openkhmer-hero { padding: 40px 24px 56px; min-height: 0; }
+  .openkhmer-hero-copy { width: 100%; }
+  .openkhmer-hero h1 { font-size: clamp(62px, 13.5vw, 94px); letter-spacing: -.065em; line-height: .98; }
+  .landing-label { font-size: 10px; margin-bottom: 120px; }
+  .landing-description { max-width: 420px; font-size: 16px; }
+  .landing-glyph { font-size: 165px; left: auto; right: 22px; top: -18px; transform: rotate(12deg); opacity: .9; }
+  .landing-ribbon.ribbon-one { top: 70px; left: -25px; width: 155px; height: 35px; }
+  .landing-ribbon.ribbon-two, .landing-fragments, .landing-sample, .landing-scan-lines { display: none; }
+  .landing-stage { max-width: 260px; }
+  .landing-button { padding-inline: 18px; }
+  .openkhmer-landing .mission-strip { justify-content: center; gap: 12px; font-size: 12px; }
+  .openkhmer-landing .mission-strip span + span { padding-left: 12px; }
+  .openkhmer-landing .mission, .openkhmer-landing .research, .openkhmer-landing .vision, .openkhmer-landing .progress-section { padding-block: 48px; }
+}
+@media (prefers-reduced-motion: reduce) { .landing-button { transition: none; } }
+
 /* Neuroshift company pages share the product palette and spacing tokens. */
 .company-header { background: var(--paper); backdrop-filter: none; }
 .company-brand { font-size: 27px; letter-spacing: -1.3px; gap: 0; }
