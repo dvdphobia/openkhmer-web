@@ -1,6 +1,6 @@
 OPENKHMER — RESEARCH BRIEF
 Research snapshot: October 2, 2026
-Contact: hello.sophanha@gmail.com
+Contact: sophanha@neuroshift.dev
 Company: Neuroshift
 Project contact: Sophanha Oun
 Public research record: /research/openkhmer-data-preparation on the Neuroshift website
@@ -34,4 +34,4 @@ SOURCE NOTE
 Prepared-corpus figures come from OPENKHMER_PROJECT_STATUS_2026-10-02.md. RESEARCH_REVIEW_NEXT_STEPS.md notes that execution of the revised Kaggle preparation workflow and training gate remains unverified. No training success or accuracy is inferred from these documents.
 
 GET IN TOUCH
-hello.sophanha@gmail.com
+sophanha@neuroshift.dev
