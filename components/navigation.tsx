@@ -45,7 +45,8 @@ function useCurrentSection() {
   return active;
 }
 
-export function Navigation() {
+export function Navigation({ home = true }: { home?: boolean }) {
+  const prefix = home ? "" : "/";
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
   const active = useCurrentSection();
@@ -72,14 +73,14 @@ export function Navigation() {
       }}
     >
       <div className="section-shell nav-shell">
-        <a className="brand" href="#" aria-label="OpenKhmer home">
+        <a className="brand" href={home ? "#" : "/"} aria-label="OpenKhmer home">
           <BrandMark />
           openkhmer<span className="brand-period">.</span>
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
           {links.slice(0, 3).map(([label, href]) => (
             <a
-              href={href}
+              href={`${prefix}${href}`}
               key={href}
               aria-current={active === href ? "location" : undefined}
             >
@@ -90,7 +91,7 @@ export function Navigation() {
         <ActionLink
           className="nav-support"
           variant="outline"
-          href="#support"
+          href={`${prefix}#support`}
           aria-current={active === "#support" ? "location" : undefined}
         >
           Support
@@ -116,7 +117,7 @@ export function Navigation() {
         {links.map(([label, href]) => (
           <a
             key={href}
-            href={href}
+            href={`${prefix}${href}`}
             aria-current={active === href ? "location" : undefined}
             onClick={() => setOpen(false)}
           >

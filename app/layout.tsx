@@ -3,12 +3,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "OpenKhmer — A digital future for Khmer text",
   description:
-    "Independent Khmer OCR research. Explore our approach, follow our progress, and support the experiments that could bring Khmer text into the digital world.",
+    "OpenKhmer is Neuroshift’s Khmer OCR product in development. Read our preparation results, research limitations, and next experiment.",
   icons: { icon: "/icon.svg" },
   openGraph: {
     title: "OpenKhmer — A digital future for Khmer text",
     description:
-      "Independent Khmer OCR research. Early days. A clear direction.",
+      "Khmer OCR research by Neuroshift. Preparation results, current limitations, and the next experiment.",
     type: "website",
     locale: "en_US",
   },

@@ -1,12 +1,15 @@
 OPENKHMER — RESEARCH BRIEF
 Research snapshot: October 2, 2026
 Contact: hello.sophanha@gmail.com
+Company: Neuroshift
+Project contact: Sophanha Oun
+Public research record: /research on the OpenKhmer website
 
 MISSION
 Research Khmer OCR that can turn printed text into searchable, usable digital text, while preserving the script's characters, marks, and joiners.
 
 STAGE
-Independent early-stage research. No public OCR product, released API, published benchmark results, or sponsorship is claimed.
+OpenKhmer is Neuroshift's Khmer OCR product in development, based in Cambodia. Current work is early-stage research. No public OCR tool, released API, published benchmark results, or sponsorship is claimed.
 
 VERIFIED FOUNDATION
 An initial Colab cleaning run for one synthetic printed Khmer dataset was completed. The prepared corpus contains 60,724 training, 3,308 validation, and 3,379 locked test examples. These are data-preparation counts, not model-performance results.
@@ -19,6 +22,7 @@ NEXT STEPS
 5. Study ornate lettering and other document styles separately.
 
 SUPPORT SOUGHT
+The next milestone is verified Kaggle preparation outputs and a documented 16-example training gate with error analysis. A failed gate will be reported and diagnosed before broader training.
 Cloud/GPU credits for controlled training and evaluation.
 Technical mentorship in OCR, Khmer language technology, and experimental design.
 Startup program support to develop a sustainable path from research to a useful product.

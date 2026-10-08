@@ -1,0 +1,35 @@
+{
+  "project": "OpenKhmer",
+  "company": "Neuroshift",
+  "published": "2026-10-08",
+  "evidence_date": "2026-10-02",
+  "stage": "Research; no validated public OCR product or accuracy benchmark",
+  "preparation": {
+    "source": "Sokheng Khmer Synthetic OCR v1",
+    "source_revision": "dca80198ee5e16dea60db11bbe7b7811c973a048",
+    "run_id": "20261002T143314Z_3a2edb23",
+    "recorded_complete_at": "2026-10-02T15:00:46Z",
+    "source_rows": 100000,
+    "multiline_rows_rejected": 25309,
+    "non_khmer_rows_rejected": 5787,
+    "train_rows_with_labels_in_source_test_excluded": 1493,
+    "train": 60724,
+    "validation": 3308,
+    "locked_test": 3379,
+    "dictionary_codepoints": 184,
+    "exact_duplicate_images": 0,
+    "conflicting_image_label_hashes": 0
+  },
+  "limitations": [
+    "Preparation figures summarize internal project notes; cloud artifacts are not published here for independent inspection.",
+    "Earlier PaddleOCR-VL diagnostic output was unusable; no model accuracy is claimed.",
+    "Revised Kaggle preparation and smoke-test execution and saved outputs remain unverified in the source review.",
+    "Synthetic printed text does not establish performance on handwriting, ornate lettering, or real document photographs.",
+    "Website preview examples are hand-authored, not model predictions."
+  ],
+  "next_milestone": "Verify revised preparation outputs and run a 16-example training gate before broader experiments.",
+  "source_documents": [
+    "OPENKHMER_PROJECT_STATUS_2026-10-02.md",
+    "RESEARCH_REVIEW_NEXT_STEPS.md"
+  ]
+}

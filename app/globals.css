@@ -1973,3 +1973,42 @@ h2 {
 
 h2, .support-copy > h2 { font-size:var(--type-heading); line-height:1.15; letter-spacing:-1.5px; }
 .action--text:active { color:var(--ink); }
+
+/* Public research record and company attribution. */
+.record-actions { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-8); align-items: center; }
+.team-section, .record-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--space-16); border-top: 1px solid var(--line); }
+.team-copy p, .record-copy p { line-height: 1.75; margin: 0 0 var(--space-6); }
+.team-copy .lead, .record-intro .lead { font-size: 20px; line-height: 1.6; }
+.team-copy > .action-link { display: flex; }
+.research-record { padding-top: var(--space-8); }
+.record-intro { max-width: 850px; }
+.record-intro > .action-link { margin-bottom: var(--space-8); }
+.record-intro h1 { font-size: clamp(42px, 6vw, 76px); line-height: 1.05; letter-spacing: -0.045em; margin: 0 0 var(--space-8); }
+.record-date { color: var(--muted); font-size: var(--type-label); line-height: 1.6; margin-top: var(--space-6); }
+.record-section { padding-block: var(--section-space); }
+.record-section h2 { font-size: clamp(28px, 3vw, 36px); letter-spacing: -1px; }
+.record-copy { min-width: 0; }
+.record-copy a:not(.action-link) { text-decoration: underline; text-underline-offset: 4px; }
+.record-table-wrap { margin-bottom: var(--space-6); }
+.record-table { width: 100%; border-collapse: collapse; font-size: var(--type-label); }
+.record-table caption { text-align: left; margin-bottom: var(--space-4); color: var(--muted); }
+.record-table th, .record-table td { padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--line); text-align: left; line-height: 1.6; }
+.record-table thead { background: var(--surface); }
+.record-table tbody th { font-weight: 400; }
+.record-table td { text-align: right; font-variant-numeric: tabular-nums; }
+.record-provenance { border-block: 1px solid var(--line); padding-block: var(--space-4); }
+.record-provenance summary { cursor: pointer; min-height: 44px; line-height: 1.6; }
+.record-provenance dl { margin: var(--space-4) 0; }
+.record-provenance dt { color: var(--muted); font-size: var(--type-label); margin-top: var(--space-4); }
+.record-provenance dd { margin: var(--space-2) 0; line-height: 1.6; overflow-wrap: anywhere; }
+.record-provenance code { font-size: var(--type-label); }
+.record-provenance p:last-child { margin-bottom: 0; }
+.record-steps { padding-left: var(--space-6); margin: 0 0 var(--space-6); }
+.record-steps li { padding-left: var(--space-2); margin-bottom: var(--space-6); line-height: 1.75; }
+.record-footer { border-top: 1px solid var(--line); padding-block: var(--space-8); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4); font-size: var(--type-label); }
+@media (max-width: 700px) {
+  .team-section, .record-section { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
+  .record-intro { padding-top: var(--space-8); }
+  .record-intro .lead, .team-copy .lead { font-size: 18px; }
+  .record-footer { align-items: flex-start; flex-direction: column; }
+}

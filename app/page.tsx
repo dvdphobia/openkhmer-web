@@ -70,9 +70,9 @@ const questions = [
       "Cloud and GPU credits can support controlled training and evaluation. Technical mentorship can help us review model choices and experimental design. Startup programs can help us build a path from research to a sustainable product. Get in touch to discuss a specific contribution and milestone.",
   },
   {
-    question: "Are you affiliated with an AI company or startup program?",
+    question: "Do you have external sponsors or startup program membership?",
     answer:
-      "No affiliation or sponsorship is claimed. We’re seeking conversations with AI infrastructure providers, startup programs, research collaborators, and people who care about Khmer language technology.",
+      "No external sponsorship or startup program membership is claimed. OpenKhmer is a Neuroshift product in development. We’re seeking conversations with AI infrastructure providers, startup programs, and Khmer language research collaborators.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function Home() {
       <main id="main">
         <section className="hero section-shell" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow-pill">Independent Khmer OCR research</p>
+            <p className="eyebrow-pill">Khmer OCR research by Neuroshift</p>
             <h1 id="hero-title">
               Khmer text.
               <br />A new chapter.
@@ -101,8 +101,8 @@ export default function Home() {
               <ActionLink variant="primary" href={site.sponsorHref}>
                 Email the team
               </ActionLink>
-              <ActionLink variant="text" href="#research">
-                Read the research
+              <ActionLink variant="text" href="/research">
+                Read the research record
               </ActionLink>
             </div>
             <p className="hero-note">Research stage. No public OCR tool yet.</p>
@@ -290,9 +290,37 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <ActionLink variant="text" href="/research-brief.txt" download>
-            Download the research brief <Arrow diagonal />
-          </ActionLink>
+          <div className="record-actions">
+            <ActionLink variant="text" href="/research">
+              Read the preparation results and next experiment <Arrow />
+            </ActionLink>
+            <ActionLink variant="text" href="/research-brief.txt" download>
+              Download the research brief
+            </ActionLink>
+          </div>
+        </section>
+        <section id="team" className="team-section section-shell section-padding">
+          <div>
+            <div className="section-kicker">THE COMPANY BEHIND OPENKHMER</div>
+            <h2>Built by Neuroshift.</h2>
+          </div>
+          <div className="team-copy">
+            <p className="lead">
+              OpenKhmer is {site.company}’s Khmer OCR product in development,
+              based in Cambodia. Our current work is research and evaluation.
+            </p>
+            <p>
+              Project contact: {site.contactName}. For research questions,
+              technical collaboration, or startup program enquiries, contact us
+              directly.
+            </p>
+            <ActionLink variant="text" href={`mailto:${site.email}`}>
+              {site.email}
+            </ActionLink>
+            <ActionLink variant="text" href={site.websiteSource}>
+              View the website source on GitHub <Arrow diagonal />
+            </ActionLink>
+          </div>
         </section>
         <section id="support" className="support-section">
           <div className="section-shell support-inner">
@@ -304,8 +332,9 @@ export default function Home() {
                 OCR research.
               </h2>
               <p>
-                We’re seeking compute credits, technical guidance, and startup
-                program support for our next research milestones.
+                Our next milestone is to verify the revised data pipeline and
+                run a 16-example training gate. Compute credits and technical
+                guidance would help us complete and document that work.
               </p>
               <ActionLink variant="primary" href={site.sponsorHref}>
                 Email the team
@@ -352,7 +381,7 @@ export default function Home() {
               <p className="support-footnote">
                 Seeking collaborators and program support.
                 <br />
-                No existing sponsorship or affiliation is implied.
+                No external program membership or sponsorship is claimed.
               </p>
             </div>
           </div>
@@ -403,10 +432,12 @@ export default function Home() {
           </ActionLink>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 OpenKhmer · Independent Khmer OCR research</span>
+          <span>© 2026 OpenKhmer · A Neuroshift product in development</span>
           <div>
             <a href="#research">Research</a>
             <a href="#progress">Progress</a>
+            <a href="/research">Research record</a>
+            <a href="#team">Company</a>
             <a href="#support">Support</a>
             <a href="#faq">FAQ</a>
           </div>
