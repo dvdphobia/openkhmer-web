@@ -39,6 +39,8 @@ Implemented focused changes:
 
 Validation passed: production build, ESLint, whitespace/diff check, and independent source review. Production-preview HTTP checks returned 200 for all five pages, robots, sitemap, and the brief; canonical/OG URLs and Organization schema were present on every page. Desktop and 390px mobile About layouts were checked, mobile Contact navigation reached `/about#contact`, and the new Claude FAQ expanded with the planned-status explanation. No new dependencies were added. The existing research counts and accuracy limitations were preserved.
 
+Published source update: commit `636553b`, pushed to `main`. Live checks on October 9 returned HTTP 200 for the same five pages, robots, sitemap, and brief; every page's canonical points to its correct `www.neuroshift.dev` URL. Cloudflare consumed the scoped email comments and left plain public email text and `mailto:` anchors intact. Live About rendering confirmed March 2025, no funds raised, and the readable business email. The code workspace was clean after the source commit. This report's subsequent documentation update does not change application behavior.
+
 ## Preparation checklist
 
 - [x] Inspect existing code and live public responses.
@@ -47,7 +49,7 @@ Validation passed: production build, ESLint, whitespace/diff check, and independ
 - [x] Verify current official program and application link.
 - [x] Draft startup description, product description, evidence list, and reconsideration message in `claude-startups-reapplication.md`.
 - [x] Complete final implementation review and affected-page tests.
-- [ ] Verify published changes after deployment.
+- [x] Verify published changes after deployment.
 - [ ] Owner confirms founder name/role, email delivery, and actual application account email.
 - [ ] Owner supplies exact rejection wording and application date.
 - [ ] Verify Search Console ownership and submit sitemap using a real Google-issued token.

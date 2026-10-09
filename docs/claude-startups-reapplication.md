@@ -65,7 +65,7 @@ Claude API credits support calls to Claude, not GPU training of Neuroshift's OCR
 - [Research brief](https://www.neuroshift.dev/research-brief.txt)
 - [Public website source](https://github.com/dvdphobia/openkhmer-web), which contains website code, not a released OCR model or public dataset artifacts.
 
-After deployment, verify [robots.txt](https://www.neuroshift.dev/robots.txt) and [sitemap.xml](https://www.neuroshift.dev/sitemap.xml). Public pages explain the company's work but do not independently establish legal incorporation or prove private run artifacts.
+[robots.txt](https://www.neuroshift.dev/robots.txt) and [sitemap.xml](https://www.neuroshift.dev/sitemap.xml) were verified live with HTTP 200 after deployment on October 9. Public pages explain the company's work but do not independently establish legal incorporation or prove private run artifacts.
 
 ## Current program status — checked October 9, 2026
 
