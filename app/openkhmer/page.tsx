@@ -1,13 +1,18 @@
 import { ActionLink } from "@/components/action-link";
 import type { Metadata } from "next";
+import { EmailLink } from "@/components/email-link";
 import { SiteFooter } from "@/components/site-footer";
 import { Arrow } from "@/components/icons";
 import { Navigation } from "@/components/navigation";
 import { LandingArt } from "@/components/landing-art";
 import { VisionPreview } from "@/components/vision-preview";
-import { site } from "@/lib/site";
+import { pageMetadata, site } from "@/lib/site";
 
-export const metadata: Metadata = { title: "OpenKhmer — Khmer OCR in development", description: "Neuroshift’s Khmer OCR project: research approach, progress and illustrative product concept." };
+export const metadata: Metadata = pageMetadata(
+  "/openkhmer",
+  "OpenKhmer — Khmer OCR research in development",
+  "OpenKhmer is Neuroshift’s early-stage Khmer OCR research project. See its current progress, limitations, and illustrative product concept.",
+);
 
 const pillars = [
   {
@@ -77,6 +82,11 @@ const questions = [
     question: "Do you have external sponsors or startup program membership?",
     answer:
       "No external sponsorship or startup program membership is claimed. OpenKhmer is a Neuroshift product in development. We’re seeking conversations with AI infrastructure providers, startup programs, and Khmer language research collaborators.",
+  },
+  {
+    question: "How might Claude be used with OpenKhmer?",
+    answer:
+      "Claude has been used as a chat assistant during research. We plan to use it for internal research and development assistance. A future document-chat feature using the Claude API could answer questions grounded in OCR text; it is not operational. It would need answer evaluation and source checks, and its usefulness would depend on Khmer OCR accuracy.",
   },
 ];
 
@@ -309,11 +319,9 @@ export default function Home() {
               technical collaboration, or startup program enquiries, contact us
               directly.
             </p>
-            <ActionLink variant="text" href={`mailto:${site.email}`}>
-              {site.email}
-            </ActionLink>
+            <EmailLink variant="text" />
             <ActionLink variant="text" href={site.websiteSource}>
-              View the website source on GitHub <Arrow diagonal />
+              Website source <Arrow diagonal />
             </ActionLink>
           </div>
         </section>
@@ -334,13 +342,7 @@ export default function Home() {
               <ActionLink variant="primary" href={site.sponsorHref}>
                 Email the team
               </ActionLink>
-              <ActionLink
-                className="support-email"
-                variant="text"
-                href={`mailto:${site.email}`}
-              >
-                {site.email} <Arrow diagonal />
-              </ActionLink>
+              <EmailLink className="support-email" variant="text" suffix="↗" />
             </div>
             <div className="support-options">
               <article>
@@ -395,9 +397,7 @@ export default function Home() {
             <p>
               Have another question?
               <br />
-              <ActionLink variant="text" href={`mailto:${site.email}`}>
-                Say hello <Arrow diagonal />
-              </ActionLink>
+              <EmailLink variant="text" label="Say hello" suffix="↗" />
             </p>
           </div>
           <div className="faq-list">

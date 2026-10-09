@@ -1737,6 +1737,9 @@ h2 {
 .support-email {
   display: flex;
 }
+.email-link-shell {
+  display: contents;
+}
 .desktop-nav a {
   display: inline-flex;
   align-items: center;
@@ -2119,7 +2122,8 @@ h2, .support-copy > h2 { font-size:var(--type-heading); line-height:1.15; letter
   .sheet-character { font-size: 120px; }
   .script-sheet { padding: 16px; }
   .company-footer-top { flex-wrap: wrap; }
-  .company-footer-top > .company-inline-link { flex-basis: 100%; }
+  .company-footer-top > .company-inline-link,
+  .company-footer-top > .email-link-shell > .company-inline-link { flex-basis: 100%; }
 }
 @media (max-width: 700px) {
   .company-header .nav-shell { height: 72px; }
@@ -2146,7 +2150,8 @@ h2, .support-copy > h2 { font-size:var(--type-heading); line-height:1.15; letter
   .company-invitation .company-eyebrow { margin-bottom: 0; }
   .company-invitation h2 { font-size: 36px; }
   .company-footer-top { flex-direction: column; gap: 24px; margin-bottom: 24px; }
-  .company-footer-top > .company-inline-link { flex-basis: auto; }
+  .company-footer-top > .company-inline-link,
+  .company-footer-top > .email-link-shell > .company-inline-link { flex-basis: auto; }
   .company-footer-bottom { align-items: flex-start; flex-direction: column; }
   .company-page-intro { padding-block: 56px 48px; }
   .company-page-intro > p:last-child { font-size: 18px; }
@@ -2167,7 +2172,8 @@ h2, .support-copy > h2 { font-size:var(--type-heading); line-height:1.15; letter
 .team-section, .record-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--space-16); border-top: 1px solid var(--line); }
 .team-copy p, .record-copy p { line-height: 1.75; margin: 0 0 var(--space-6); }
 .team-copy .lead, .record-intro .lead { font-size: 20px; line-height: 1.6; }
-.team-copy > .action-link { display: flex; }
+.team-copy > .action-link,
+.team-copy > .email-link-shell > .action-link { display: flex; }
 .research-record { padding-top: var(--space-8); }
 .record-intro { max-width: 850px; }
 .record-intro > .action-link { margin-bottom: var(--space-8); }

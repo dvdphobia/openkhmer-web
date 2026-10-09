@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { ActionLink } from "@/components/action-link";
 import { SiteFooter } from "@/components/site-footer";
 import { Navigation } from "@/components/navigation";
-import { site } from "@/lib/site";
+import { pageMetadata, site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "OpenKhmer research record — Preparation results and next experiment",
-  description:
-    "A dated record of OpenKhmer’s initial data preparation, current model limitations, and the next validation gate. Khmer OCR research by Neuroshift.",
-};
+export const metadata: Metadata = pageMetadata(
+  "/research/openkhmer-data-preparation",
+  "OpenKhmer research record — Preparation results and next experiment",
+  "A dated record of OpenKhmer’s initial data preparation, current model limitations, and the next validation gate. Khmer OCR research by Neuroshift.",
+);
 
 const counts = [
   ["Source rows", "100,000"],

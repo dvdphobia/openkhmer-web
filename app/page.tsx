@@ -3,7 +3,13 @@ import { Navigation } from "@/components/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { ResearchArt } from "@/components/research-art";
 import { ResearchEntry } from "@/components/research-entry";
-import { site } from "@/lib/site";
+import { pageMetadata, site } from "@/lib/site";
+
+export const metadata = pageMetadata(
+  "/",
+  "Neuroshift — Research and product development",
+  "Neuroshift is the Cambodia-based company behind OpenKhmer. Explore our Khmer OCR research, preparation results, and current limitations.",
+);
 
 export default function CompanyHome() {
   return (

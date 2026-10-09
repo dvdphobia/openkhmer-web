@@ -8,6 +8,7 @@ const links = [
   ["Research", "/research"],
   ["OpenKhmer", "/openkhmer"],
   ["About", "/about"],
+  ["Contact", "/about#contact"],
 ];
 
 export function Navigation() {

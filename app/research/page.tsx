@@ -3,8 +3,13 @@ import Link from "next/link";
 import { Navigation } from "@/components/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { ResearchEntry } from "@/components/research-entry";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Research — Neuroshift", description: "Dated research notes from Neuroshift’s OpenKhmer project: preparation results, limitations and planned experiments." };
+export const metadata: Metadata = pageMetadata(
+  "/research",
+  "OpenKhmer research — Neuroshift",
+  "Dated research notes from Neuroshift’s OpenKhmer project, with preparation results, limitations, and planned experiments.",
+);
 
 export default function ResearchIndex() {
   return (
